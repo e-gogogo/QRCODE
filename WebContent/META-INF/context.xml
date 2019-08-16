@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Context>
+    <Resource 
+        name="jdbc/QRCODE"  
+        type="javax.sql.DataSource"  
+        driverClassName="com.mysql.jdbc.Driver" 
+        maxIdle="2" 
+        maxWait="5000" 
+        username="root" 
+        password="123456"  
+        url="jdbc:mysql://localhost:3306/QRCODE?useUnicode=true&amp;characterEncoding=UTF-8" 
+        maxActive="4"/> 
+</Context>
