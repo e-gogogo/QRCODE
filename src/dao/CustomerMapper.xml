@@ -6,4 +6,7 @@
     <select id="getCustomerByCname" parameterType="String" resultType="Customer">
 		select * from customer where Cname=#{Cname}
 	</select>
+	<select id="getCUstomerByCmail" parameterType="String" resultType="Customer">
+		select * from customer where Cmail=#{Cmail}
+	</select>
 </mapper>

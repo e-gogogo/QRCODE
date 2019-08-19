@@ -13,6 +13,7 @@ import domain.Customer;
 public class CustomerService {
 	@Resource
 	CustomerMapper customermapper;
+	
 	public Customer login(String Cname){
 		Customer customer = null;
 		customer = customermapper.getCustomerByCname(Cname);
