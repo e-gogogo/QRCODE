@@ -1,0 +1,11 @@
+CREATE TABLE Sales_list(
+Sid CHAR(4) NOT NULL PRIMARY KEY,
+Smid CHAR(4),
+Scid CHAR(4),
+Spid CHAR(4),
+Snum INT,
+Ssum DECIMAL(10,2)£¬
+FOREIGN KEY(Smid) REFERENCES Manager(Mid),
+FOREIGN KEY(Scid) REFERENCES Customer(Cid),
+FOREIGN KEY(Spid) REFERENCES Product(Pid)
+);
