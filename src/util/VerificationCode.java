@@ -17,7 +17,8 @@ import sun.font.CreatedFontTracker;
 
 
 public class VerificationCode {
-	public static void sendMail() throws MessagingException {
+	public static String sendMail(String Receive) throws MessagingException {
+		String code = "";
 		Properties properties = System.getProperties();// 获取系统属性		 
         properties.setProperty("mail.smtp.host", "smtp.qq.com");// 设置邮件服务器
         properties.setProperty("mail.smtp.auth", "true");// 打开认证
@@ -40,11 +41,11 @@ public class VerificationCode {
             // 2.1设置发件人
             message.setFrom(new InternetAddress("1023509171@qq.com"));
             // 2.2设置接收人
-            message.addRecipient(Message.RecipientType.TO, new InternetAddress("171764432@qq.com"));
+            message.addRecipient(Message.RecipientType.TO, new InternetAddress(Receive));
             // 2.3设置邮件主题
             message.setSubject("账号激活");
             // 2.4设置邮件内容
-            String code = VerificationCode.createVerificationCode();
+            code = VerificationCode.createVerificationCode();
             String content = "<h1>Email地址验证<br/></h1>"+ 
             		"尊敬的用户您好：<br/>"+
             		"您收到这封邮件是融e购进行新用户注册或者用户忘记密码<br/>"+
@@ -58,7 +59,7 @@ public class VerificationCode {
 			e.printStackTrace();
 		}
         
-	
+			return code;
 	
 	}
 	static String createVerificationCode(){

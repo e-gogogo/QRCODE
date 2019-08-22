@@ -6,7 +6,12 @@
     <select id="getCustomerByCname" parameterType="String" resultType="Customer">
 		select * from customer where Cname=#{Cname}
 	</select>
-	<select id="getCUstomerByCmail" parameterType="String" resultType="Customer">
+	<select id="getCustomerByCmail" parameterType="String" resultType="Customer">
 		select * from customer where Cmail=#{Cmail}
 	</select>
+	<update id="updateCustomerCpw" parameterType="Customer">
+	update customer
+	set Cpw = #{Cpw}
+	where Cid = #{Cid}
+	</update>
 </mapper>

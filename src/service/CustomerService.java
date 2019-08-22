@@ -1,5 +1,7 @@
 package service;
 
+import java.util.regex.Pattern;
+
 import javax.annotation.Resource;
 
 import org.springframework.context.annotation.Scope;
@@ -16,7 +18,18 @@ public class CustomerService {
 	
 	public Customer login(String Cname){
 		Customer customer = null;
-		customer = customermapper.getCustomerByCname(Cname);
+		if(isEmail(Cname)){
+			customer = customermapper.getCustomerByCmail(Cname);
+		}else{
+			customer = customermapper.getCustomerByCname(Cname);
+
+		}
 		return customer;
+	}
+	public void resetPassword(Customer customer){
+		customermapper.updateCustomerCpw(customer);
+	}
+	public static boolean isEmail(String s) {    
+	    return Pattern.compile("\\w+@{1}\\w+\\.{1}\\w+").matcher(s).matches();    
 	}
 }
