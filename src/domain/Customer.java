@@ -4,7 +4,7 @@ public class Customer {
 	private String Cid;
 	private String Cname;
 	private String Cpw;
-	private String Ctel;
+	private String Cmail;
 	public String getCid() {
 		return Cid;
 	}
@@ -23,18 +23,18 @@ public class Customer {
 	public void setCpw(String cpw) {
 		Cpw = cpw;
 	}
-	public String getCtel() {
-		return Ctel;
+	public String getCmail() {
+		return Cmail;
 	}
-	public void setCtel(String ctel) {
-		Ctel = ctel;
+	public void setCmail(String cmail) {
+		Cmail = cmail;
 	}
-	public Customer(String cid, String cname, String cpw, String ctel) {
+	public Customer(String cid, String cname, String cpw, String cmail) {
 		super();
 		Cid = cid;
 		Cname = cname;
 		Cpw = cpw;
-		Ctel = ctel;
+		Cmail = cmail;
 	}
 	public Customer() {
 		super();
@@ -42,7 +42,8 @@ public class Customer {
 	}
 	@Override
 	public String toString() {
-		return "Customer [Cid=" + Cid + ", Cname=" + Cname + ", Cpw=" + Cpw + ", Ctel=" + Ctel + "]";
+		return "Customer [Cid=" + Cid + ", Cname=" + Cname + ", Cpw=" + Cpw + ", Cmail=" + Cmail + "]";
 	}
+	
 	
 }

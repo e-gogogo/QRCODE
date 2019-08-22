@@ -18,11 +18,11 @@
 					<p><font color="red" size="4"><form:errors /></font></p>
 					<table>
 						<tr id = "login_username">
-							<td><form:input path="Cname" id = "login_Cname" value = "Cname"/><br><br></td>
+							<td><form:input path="Cname" id = "login_Cname" value = ""/><br><br></td>
 							<td><font color="red" id = "login_Cname_error" size="4"><form:errors path="Cname" /></font><br><br></td>
 						</tr>
 						<tr id = "login_password">
-							<td><form:password path="Cpw" id = "login_Cpw" value = "Cpw"/><br><br></td>
+							<td><form:password path="Cpw" id = "login_Cpw" value = ""/><br><br></td>
 							<td><font color="red" id = "login_Cpw_error" size="4"><form:errors path="Cpw" /></font><br><br></td>
 						</tr>
 					</table>

@@ -3,13 +3,14 @@ package domain;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotEmpty;
 public class CustomerLogin {
-	@NotNull(message="username cannot be null")
-	@Length(min=1,max=20,message="Length : {min} ~{max}")
+	@NotEmpty(message="用户名不能为空")
+	@Length(min=0,max=20,message="用户名长度超出限制")
 	private String Cname;
 	
-	@NotNull(message="password cannot be null")
-	@Length(min=4,max=10,message="Length : {min} ~{max}")
+	@NotEmpty(message="密码不能为空")
+	@Length(min=0,max=10,message="密码长度超出限制")
 	private String Cpw;
 
 	public String getCname() {
