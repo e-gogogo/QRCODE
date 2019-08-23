@@ -53,4 +53,9 @@
 					value="dao.CustomerMapper" />
 				<property name="sqlSessionFactory" ref="sqlSessionFactory" />
 			</bean>
+			<bean id="managerMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+				<property name="mapperInterface"
+					value="dao.ManagerMapper" />
+				<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+			</bean>
 </beans>

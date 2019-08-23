@@ -43,7 +43,7 @@ public class VerificationCode {
             // 2.2设置接收人
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(Receive));
             // 2.3设置邮件主题
-            message.setSubject("账号激活");
+            message.setSubject("邮箱验证");
             // 2.4设置邮件内容
             code = VerificationCode.createVerificationCode();
             String content = "<h1>Email地址验证<br/></h1>"+ 

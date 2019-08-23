@@ -32,4 +32,7 @@ public class CustomerService {
 	public static boolean isEmail(String s) {    
 	    return Pattern.compile("\\w+@{1}\\w+\\.{1}\\w+").matcher(s).matches();    
 	}
+	public void addCustomer(Customer customer){
+		customermapper.addCustomer(customer);
+	}
 }
