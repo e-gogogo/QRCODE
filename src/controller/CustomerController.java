@@ -86,4 +86,40 @@ public class CustomerController {
 		customerservice.resetPassword(customer);
 		return "redirect:/customer/login.jsp";
 	}
+	@RequestMapping(value = "/registerVerify",method = RequestMethod.POST,produces = "text/html;charset=UTF-8;")
+	public String registerVerify(@RequestBody String Cmail,HttpSession session) throws  UnsupportedEncodingException, MessagingException{
+		Cmail=URLDecoder.decode(Cmail,"utf-8");
+		String[] mail = Cmail.split("=");
+		Customer customer = null;
+		customer = customerservice.login(mail[1]);
+		if(customer != null){
+			return "error";
+		}
+		String verificationCode = VerificationCode.sendMail(mail[1]);
+		session.setAttribute("Cmail", mail[1]);
+		session.setAttribute("verificationCode", verificationCode);
+		
+		return "redirect:/customer/index.jsp";
+	}
+	
+	@RequestMapping(value = "/register",method = RequestMethod.POST ,produces = "text/html;charset=UTF-8;")
+	public String register(String Cmail,String Code,String Cpw,String Cname,HttpSession session) throws UnsupportedEncodingException{
+		Cmail=URLDecoder.decode(Cmail,"utf-8");
+		Customer customer = null;
+		customer = customerservice.login(Cname);
+		if(customer != null){
+			return "error";
+		}
+		if(!Cmail.equals(session.getAttribute("Cmail"))){
+			return "error";
+		}else if(!Code.equals(session.getAttribute("verificationCode"))){
+			return "error";
+		}
+		customer = new Customer();
+		customer.setCmail(Cmail);
+		customer.setCname(Cname);
+		customer.setCpw(Cpw);
+		customerservice.addCustomer(customer);
+		return "redirect:/customer/index.jsp";
+	}
 }

@@ -14,4 +14,9 @@
 	set Cpw = #{Cpw}
 	where Cid = #{Cid}
 	</update>
+	
+	<insert id = "addCustomer" parameterType = "Customer" useGeneratedKeys="true" keyProperty="Cid">
+	    insert into Customer(Cname,Cpw,Cmail)
+		values(#{Cname},#{Cpw},#{Cmail})
+	</insert>
 </mapper>
