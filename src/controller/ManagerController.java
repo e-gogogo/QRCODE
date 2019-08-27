@@ -1,5 +1,7 @@
 package controller;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
@@ -10,14 +12,17 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import domain.Customer;
 import domain.Manager;
 import domain.ManagerLogin;
+import domain.SaleInfo;
 import service.ManagerService;
 
 @Controller
 @RequestMapping(value = "/manager")
 public class ManagerController {
 	
+	private static final String Manager = null;
 	@Resource
 	ManagerService managerservice;
 	
@@ -34,5 +39,20 @@ public class ManagerController {
 		}
 		session.setAttribute("manager", manager);
 		return "redirect:/customer/index.jsp";
+	}
+	
+	@RequestMapping(value = "/Search",method = RequestMethod.POST)
+	public List<SaleInfo> search(String whetherall,String Mname,HttpSession session){
+		Manager manager= (Manager) session.getAttribute("Manager");
+		String mname = manager.getMname();
+		if (whetherall == null) {
+			
+			return managerservice.getListByName(mname);
+		}
+		
+		else {
+			return managerservice.getAllListByName(mname);
+		}
+		
 	}
 }
