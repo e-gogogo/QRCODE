@@ -44,7 +44,10 @@
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_191"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v9.0"/>
 	<classpathentry exported="true" kind="lib" path="WebContent/WEB-INF/lib/druid-1.0.9.jar"/>
+<<<<<<< HEAD
 	<classpathentry exported="true" kind="lib" path="WebContent/WEB-INF/lib/Qrcode_A.jar"/>
 	<classpathentry exported="true" kind="lib" path="WebContent/WEB-INF/lib/qrcode_B.jar"/>
+=======
+>>>>>>> 50139c412cdc2b3f5caaf5a593a89796a670ae8c
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
