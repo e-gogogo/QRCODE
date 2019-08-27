@@ -122,4 +122,6 @@ public class CustomerController {
 		customerservice.addCustomer(customer);
 		return "redirect:/customer/index.jsp";
 	}
+	
+	
 }

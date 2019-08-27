@@ -6,5 +6,7 @@
     <select id="getManagerByMid" parameterType="int" resultType="Manager">
 		select * from manager where Mid=#{Mid}
 	</select>
-	
+	<select id="getProductByPid" parameterType="int" resultType="Product">
+		select * from product where Pid=#{Pid}
+	</select>
 </mapper>
