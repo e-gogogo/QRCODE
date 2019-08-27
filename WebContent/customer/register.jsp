@@ -3,9 +3,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<script type="text/javascript" src="../js/jquery-1.6.2.min.js"></script>
-<title>用户注册</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<meta name="viewport" content="height=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+	<script type="text/javascript" src="../js/jquery-1.6.2.min.js"></script>
+	<title>用户注册</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/register.css"/>
 <script type="text/javascript">
 	function getVerificationCode() {
 		var mail = document.getElementById("Cmail").value;
@@ -76,8 +80,9 @@
 	}
 </script>
 </head>
+
 <body>
-<div class="register">
+	<div class="register">
         <div class="regTop">
             <span>用户注册</span>
             <a class="back" href="index.html">&lt;&nbsp;返回</a>
@@ -89,16 +94,21 @@
                 <div class="message">
                     <input id="Cmail" type="text" placeholder="请输入邮箱"  required/>
                     <input id="VerificationCode" type="text" placeholder="输入验证码" pattern="[0-9]{6}" required/>
+                </div>
+                <div class="verify">                    
                     <input type="button" id="verification_button" value="获取验证码" onclick="getVerificationCode()">
+                </div>
+                <div class="message">   
                     <input id="Cname" type="text" placeholder="请输入用户名"  required/>
                     <input id="Cpw" type="password" placeholder="请输入4-10位密码" pattern="[0-9A-Za-z]{4,10}" required/>
-                    <input id="reCpw"type="password" placeholder="请再次输入密码" pattern="[0-9A-Za-z]{4,10}" required/>
-                    
+                    <input id="reCpw" type="password" placeholder="请再次输入密码" pattern="[0-9A-Za-z]{4,10}" required/>
                 </div>
                 <div class="agree">
                     <input type="checkbox"/><span>&nbsp;同意&nbsp;</span><a href="default.htm">《注册协议》</a>
                 </div>
-                <input type="button" class="submit" id="register_button" onclick="register()">注册</button>
+                <div class="submit">  
+                	<input class="submit" type="button" id="register_button" onclick="register()" value=""></button>
+                </div>
         </div>
     </div>
 </body>

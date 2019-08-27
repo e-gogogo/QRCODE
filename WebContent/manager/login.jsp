@@ -9,6 +9,7 @@
 <title>客户经理登录</title>
 </head>
 <body>
+<!-- 
 <jsp:useBean id="mloginBean" scope="request" class="domain.ManagerLogin"></jsp:useBean>
 <c:url var="url" scope="request" value="/manager/login" />
 	<center>
@@ -33,6 +34,6 @@
 				</form:form>
 			</div>
 		</div>
-	</center>
+	</center> -->
 </body>
 </html>

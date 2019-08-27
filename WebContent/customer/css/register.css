@@ -1,0 +1,105 @@
+body{
+    background: #efeff4;
+    width: 100%;
+    height: 100%;
+}
+.regTop{
+    width: 100%;
+    padding:8% 0 6%;
+    background: #CC0000;
+    text-align: center;
+    color: #FFFFFF;
+    position: relative;
+}
+.back{
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    color: #FFFFFF
+}
+.point{
+    padding: 6% 5%;
+}
+.content form input:not(:nth-child(6)){
+    border: 0;
+    border-bottom: 1.0px solid #c3c3c5;
+}
+.content form{
+    width: 100%;
+    height: 35.21%;
+}
+.message{
+    background: #ffffff;
+    padding:2% 5% 0 5%;
+    position: relative;
+}
+.message input{
+    width: 90%;
+    padding: 4% 0 4% 10%;
+    font-size: 0.875em;
+    font-family: "Microsoft YaHei";
+}
+.message .icons b{
+    position: absolute;
+    width: 3.75%;
+    height: 4%;
+    top: 7%;
+    left: 7%;
+}
+.message .icons b img{
+    width: 100%;
+}
+.message .icons b:nth-child(2){
+    width: 5%;
+    top: 26%;
+    left: 6%;
+}
+.message .icons b:nth-child(3){
+    top: 43%;
+}
+.message .icons b:nth-child(4){
+    top: 61%;
+}
+.code{
+    position: absolute;
+    top: 85%;
+    right:10%;
+    color: #CC0000;
+    font-size: 0.9em;
+    font-family: "Microsoft YaHei";
+}
+/*select{
+    width: 33%;
+    padding: 2% 1%;
+    margin: 5%;
+    font-size: 1em;
+    color: #CC0000;
+    border: solid 1px #909093;
+    font-family: "Microsoft YaHei";
+}*/
+.agree{
+    margin: 5% 5%;
+}
+.submit{
+    width: 30%;
+    margin: 2% 35%;
+    background: #CC0000;
+    color: #FFFFFF;
+    border: 0;
+    padding: 3.25% 0;
+    font-size: 1.0em;
+    font-family: "Microsoft YaHei";
+}
+.verify{
+    width: 30%;
+    margin: 2% 35%;
+    background: #FFFFFF;
+    color: #FFFFFF;
+    border: 0;
+    padding: 3.25% 0;
+    font-size: 1.0em;
+    font-family: "Microsoft YaHei";
+}
+form .agree input[type="checkbox"] :default{
+    outline: 0.9px solid #21a9f5;
+}

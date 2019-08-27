@@ -1,4 +1,4 @@
-package domain;
+﻿package domain;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotEmpty;
