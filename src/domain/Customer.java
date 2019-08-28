@@ -1,14 +1,15 @@
 package domain;
 
 public class Customer {
-	private String Cid;
+	private int Cid;
 	private String Cname;
 	private String Cpw;
 	private String Cmail;
-	public String getCid() {
+	
+	public int getCid() {
 		return Cid;
 	}
-	public void setCid(String cid) {
+	public void setCid(int cid) {
 		Cid = cid;
 	}
 	public String getCname() {
@@ -29,7 +30,7 @@ public class Customer {
 	public void setCmail(String cmail) {
 		Cmail = cmail;
 	}
-	public Customer(String cid, String cname, String cpw, String cmail) {
+	public Customer(int cid, String cname, String cpw, String cmail) {
 		super();
 		Cid = cid;
 		Cname = cname;

@@ -19,6 +19,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import domain.Customer;
 
 import domain.CustomerLogin;
+import domain.Product;
+import domain.SalesList;
 import service.CustomerService;
 import util.VerificationCode;
 
@@ -123,5 +125,24 @@ public class CustomerController {
 		return "redirect:/customer/index.jsp";
 	}
 	
-	
+	@SuppressWarnings("null")
+	@RequestMapping(value = "/purchase",method = RequestMethod.POST ,produces = "text/html;charset=UTF-8;")
+	public String purchase(String Mid,String Pid,HttpSession session) {
+		Customer customer = (Customer) session.getAttribute("customer");
+		System.out.println("Cid" + customer.getCid());
+		Product product = customerservice.getProductByPid(Integer.valueOf(Pid));
+		SalesList saleslist = new SalesList();
+		System.out.println("Mid=" + Mid);
+		System.out.println("Pid=" + Pid);
+		saleslist.setSnum(1);
+		saleslist.setSsum(product.getPprice());
+		saleslist.setScid(customer.getCid());
+		saleslist.setSmid(Integer.valueOf(Mid));
+		saleslist.setSpid(Integer.valueOf(Pid));
+		
+		
+		
+		customerservice.addSalesList(saleslist);
+		return "redirect:/customer/index.jsp";
+	}
 }

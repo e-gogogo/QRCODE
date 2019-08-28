@@ -7,16 +7,16 @@ import org.springframework.stereotype.Service;
 
 import dao.ManagerMapper;
 import domain.Manager;
-<<<<<<< HEAD
+
 import domain.Product;
-=======
+
 import domain.SaleInfo;
 import util.QueryInfo;
 import util.QueryInfoAll;
 
 import java.util.List;
-import domain.SaleInfo;
->>>>>>> 8ddb3304cecf0f996da4c9bcb6653935242c1645
+
+
 
 
 @Service

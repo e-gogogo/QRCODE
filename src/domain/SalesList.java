@@ -1,68 +1,51 @@
 package domain;
 
 public class SalesList {
-	private String Sid;
-	private String Smid;
-	private String Scid;
-	private String Spid;
-	private String Snum;
-	private String Ssum;
-	
-	public String getSid()
-	{
+	private int Sid;
+	private int Smid;
+	private int Scid;
+	private int Spid;
+	private int Snum;
+	private float Ssum;
+	public int getSid() {
 		return Sid;
 	}
-	public void setSid(String sid)
-	{
+	public void setSid(int sid) {
 		Sid = sid;
 	}
-	public String getSmid()
-	{
+	public int getSmid() {
 		return Smid;
 	}
-	public void setSmid(String smid)
-	{
+	public void setSmid(int smid) {
 		Smid = smid;
 	}
-	public String getScid()
-	{
+	public int getScid() {
 		return Scid;
 	}
-	public void setScid(String scid)
-	{
+	public void setScid(int scid) {
 		Scid = scid;
 	}
-	public String getSpid()
-	{
+	public int getSpid() {
 		return Spid;
 	}
-	public void setSpid(String spid)
-	{
+	public void setSpid(int spid) {
 		Spid = spid;
 	}
-	public String getSnum()
-	{
+	public int getSnum() {
 		return Snum;
 	}
-	public void setSnum(String snum)
-	{
+	public void setSnum(int snum) {
 		Snum = snum;
 	}
-	public String getSsum()
-	{
+	public float getSsum() {
 		return Ssum;
 	}
-	public void setSsum(String ssum)
-	{
+	public void setSsum(float ssum) {
 		Ssum = ssum;
 	}
-	//
-	@Override
-	public String toString()
-	{
-		return "SalesList [Sid=" + Sid + ", Smid=" + Smid + ", Scid=" + Scid + ", Spid=" + Spid + ", Snum=" + Snum
-				+ ", Ssum=" + Ssum + "]";
-	}
+	
+	
+	
 	
 	
 }

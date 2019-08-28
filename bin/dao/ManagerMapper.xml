@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3.dtd">
+<mapper namespace="dao.ManagerMapper">
+    <select id="getManagerByMid" parameterType="int" resultType="Manager">
+		select * from manager where Mid=#{Mid}
+	</select>
+	<select id="getProductByPid" parameterType="int" resultType="Product">
+		select * from product where Pid=#{Pid}
+	</select>
+</mapper>
