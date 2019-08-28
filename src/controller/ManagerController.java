@@ -1,8 +1,12 @@
 package controller;
 
+<<<<<<< HEAD
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+=======
+import java.util.List;
+>>>>>>> 8ddb3304cecf0f996da4c9bcb6653935242c1645
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
@@ -15,11 +19,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import domain.Customer;
 import domain.Manager;
 import domain.ManagerLogin;
+<<<<<<< HEAD
 import domain.Product;
 import domain.QrCode;
 import net.sf.json.JSONObject;
+=======
+import domain.SaleInfo;
+>>>>>>> 8ddb3304cecf0f996da4c9bcb6653935242c1645
 import service.ManagerService;
 import util.CreateQrcode;
 
@@ -27,6 +36,7 @@ import util.CreateQrcode;
 @RequestMapping(value = "/manager")
 public class ManagerController {
 	
+	private static final String Manager = null;
 	@Resource
 	ManagerService managerservice;
 	
@@ -62,5 +72,20 @@ public class ManagerController {
 		JSONObject oj = new JSONObject();
 		oj.put("savePath", path);
 		return oj.toString();
+	}
+	
+	@RequestMapping(value = "/Search",method = RequestMethod.POST)
+	public List<SaleInfo> search(String whetherall,String Mname,HttpSession session){
+		Manager manager= (Manager) session.getAttribute("Manager");
+		String mname = manager.getMname();
+		if (whetherall == null) {
+			
+			return managerservice.getListByName(mname);
+		}
+		
+		else {
+			return managerservice.getAllListByName(mname);
+		}
+		
 	}
 }

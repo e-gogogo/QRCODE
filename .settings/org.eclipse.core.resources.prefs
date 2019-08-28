@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+encoding//src/util/JDBCUtils.java=gbk
+<<<<<<< HEAD
+encoding//src/util/QRUseageDemmo.java=UTF-8
+=======
+>>>>>>> 50139c412cdc2b3f5caaf5a593a89796a670ae8c
+encoding//src/util/QueryInfo.java=gbk
+encoding//src/util/QueryInfoAll.java=gbk
+encoding/<project>=UTF-8
