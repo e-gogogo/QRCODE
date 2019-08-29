@@ -1,4 +1,4 @@
-/*
+﻿/*
 SQLyog Enterprise v12.09 (64 bit)
 MySQL - 5.7.25 : Database - tables_qrcode
 *********************************************************************
@@ -76,7 +76,7 @@ CREATE TABLE `product` (
   `Pid` int(11) NOT NULL AUTO_INCREMENT,
   `Pname` varchar(20) NOT NULL,
   `Pprice` decimal(10,2) DEFAULT NULL,
-  `Pintro` text,
+  `Padd` varchar(30),
   PRIMARY KEY (`Pid`),
   UNIQUE KEY `Pname` (`Pname`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;

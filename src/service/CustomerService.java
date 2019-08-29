@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 
 import dao.CustomerMapper;
 import domain.Customer;
+import domain.Product;
+import domain.SalesList;
 
 @Service
 @Scope
@@ -34,5 +36,12 @@ public class CustomerService {
 	}
 	public void addCustomer(Customer customer){
 		customermapper.addCustomer(customer);
+	}
+	public Product getProductByPid(int Pid){
+		Product product = customermapper.getProductByPid(Pid);
+		return product;
+	}
+	public void addSalesList(SalesList saleslist){
+		customermapper.addSalesList(saleslist);
 	}
 }
