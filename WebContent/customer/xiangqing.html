@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="viewport" content="height=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+		<title>天使之眼购买界面</title>
+		<script>
+			function buy_confrim(){
+				var r=confirm("确认购买该商品？");
+				if(r==true)
+				{
+					alert("购买成功！")
+				}
+			}
+			
+		</script>
+		<style type="text/css">
+			.button{
+				 background-color: #CC0000;
+                 border: none;
+                 color: white;
+                 padding: 8px 20px;
+                 text-align: center;
+                 font-size: 12px;
+                 cursor: pointer;
+                 margin-top: 365px;
+                 margin-left: 230px;
+			}
+			.text1{
+				margin-top: -28px;
+                margin-left: 80px;
+                color: #CC0000;
+                font-size: 20px;
+			}
+			</style>
+	</head>
+	<body>
+		<div class='pic1' div style='position:absolute; left:70px; top:120px'>
+		 <img src='img/1.jpg' width="250" height="250"/>
+		 </div>
+		 <!--<div class='pic2' div style='position:absolute; left:0px; top:0px'>
+		 	<img src='img/3.jpg' width="1000" height="70"/>
+		 </div>-->
+		 <div class='pic3' div style='position:absolute; left:70px; top:420px'>
+		 	<img src='img/7.jpg' width="250" height="80"/>
+		 </div>
+		 <div class='pic4' div style='position:absolute; left:70px; top:510px'>
+		 	<img src='img/4.jpg' width="250" height="500"/>
+		 </div>
+		 <div class='pic5' div style='position:absolute; left:70px; top:1000px'>
+		 	<img src='img/5.jpg' width="250" height="500"/>
+		 </div>
+		 <div class='pic6' div style='position:absolute; left:70px; top:1500px'>
+		 	<img src='img/6.jpg' width="250" height="500"/>
+		 </div>
+		 <button class="button" onclick="buy_confrim()">立即购买</button>
+		 <p class="text1">￥2180.00</p>
+	</body>
+</html>

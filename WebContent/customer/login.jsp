@@ -131,7 +131,7 @@ body {background-color:gray}
 					<p>忘记密码？</p>
 				</div>
 				<div class="register" >
-					<p href=""javascript:;"">立即注册</p>
+					<p> <a href="index.jsp"> 立即注册</a> </p>
 				</div>
 				</form:form>
 
