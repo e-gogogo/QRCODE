@@ -1,5 +1,25 @@
 <!DOCTYPE html>
 <html>
+<script>
+//查询分类数据
+        $.get("SaleInfo/searchLowerList",{},function (data) {
+            //[{Md:1ii,cname:Mlevel},{},{}]
+            var lis = '<li class="nav-active"> </li>';
+            //遍历数组,拼接字符串(<li>)
+            for (var i = 0; i < data.length; i++) {
+                var li = '<li><a href="route_list.html?cid='+data[i].cid+'">'+data[i].cname+'</a></li>';
+
+                lis += li;
+                
+            }
+
+            //将lis字符串，设置到ul的html内容中
+            $("#category").html(lis);
+        });
+
+    });
+
+</script>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>

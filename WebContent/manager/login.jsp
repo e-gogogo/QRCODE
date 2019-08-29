@@ -97,22 +97,22 @@ body {background-color:antiquewhite}
 				<p><font color="red" size="4"><form:errors /></font></p>
 			<div class="gcs-login-container">
 				<!--<form action="form_action.asp" method="get">-->
-  				<form:input type="text" path="Mid" class="input" placeholder="请输入用户名"/>
+  				<form:input path="Mid" class="input" placeholder="请输入用户名"/>
 			</div>
 <!--<div class="gcs-login-container">
  <input type="text" onkeyup="value=value.replace(/\D/g,'')"   class="input" placeholder="请输入机构号" />
 </div>-->
 			<div class="gcs-login-container">
-  				<form:input type="password" path="Mpw" class="input" placeholder="请输入密码"/>
+  				<form:password path="Mpw" class="input" placeholder="请输入密码"/>
 			</div>
-			</form:form>
+
 <br />
 <br />
 			<div class="gcs-login-container">
-				<input type="button" value="立即登录" class="btn-login" />
+				<input type="submit" value="立即登录" class="btn-login" />
 				<body background="img/20190820112137.gif">
 			</div>
 </center>
-
+</form:form>
 </body>
 </html>

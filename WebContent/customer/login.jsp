@@ -128,19 +128,18 @@ body {background-color:gray}
 					<form:input path="Cpw" type="password"  class="input" placeholder="请输入密码"/>
 				</div>
 				<div class="forget-mm" >
-					<p>忘记密码？</p>
+					<p><a href="forgetPassword.jsp">忘记密码？</p>
 				</div>
 				<div class="register" >
 					<p> <a href="index.jsp"> 立即注册</a> </p>
 				</div>
-				</form:form>
-
 
 		<div class="gcs-login-container">
 			<input type="button" value="立即登录" class="btn-login" />
 			<body background="img/background2.jpg">
 		</div>
 		</center>
+        	</form:form>
 	</div>
 </div>	
 </body>

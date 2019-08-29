@@ -6,6 +6,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script type="text/javascript" src="../js/jquery-1.6.2.min.js"></script>
 <title>商品列表</title>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" href="css/search.css">
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/getParameter.js"></script>
 <script type="text/javascript">
 	function showInfo(Pid) {
 			//ajax将邮箱传入后台			
@@ -30,19 +34,14 @@
 				}
 			})
 		}
-	
-
-
 </script>
+
 </head>
 <body>
+<!--引入头部-->
 <div id="header"></div>
 <div class="page_one">
     <div class="contant">
-        <div class="crumbs">
-            
-            <p>黑马旅行><span>搜索结果</span></p>
-        </div>
         <div class="xinxi clearfix">
             <div class="left">
                 <div class="header">
@@ -51,41 +50,41 @@
                 </div>
                 <ul id="route">
                     <li>
-                        <div class="img"><img src="../image/img1.jpg" width="150" height="150" ></div>
+                        <div class="img"><img src="img/route-03.jpg" alt=""></div>
                         <div class="text1">
-                            <p>一朵小发发</p>
-                            <br/>
-                            <p>合欢花</p>
-                        </div>
-                        <div class="price">
-                            <p class="price_num">
-                                <span>&yen;</span>
-                                <span>299</span>
-                                <span>起</span>
-                            </p>
-                            <p><a href="javascript:void(0);" onclick="showInfo(1)">查看详情</a></p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="img"><img src="images/04-search_03.jpg" alt=""></div>
-                        <div class="text1">
-                            <p>浪花朵朵旅行普吉岛丛林飞跃空中飞人探险游中文服务泰国旅游</p>
+                            <p>天使之眼</p>
                             <br/>
                             <p>1-2月出发，网付立享￥1099/2人起！爆款位置有限，抢完即止！</p>
                         </div>
                         <div class="price">
                             <p class="price_num">
                                 <span>&yen;</span>
-                                <span>899</span>
+                                <span>50</span>
                                 <span>起</span>
                             </p>
-                            <p><a href="route_detail.html">查看详情</a></p>
+                            <p><a href="javascript:void(0);" onclick="showInfo(1)">查看详情</a></p>
                         </div>
                     </li>
                     <li>
-                        <div class="img"><img src="images/04-search_03.jpg" alt=""></div>
+                        <div class="img"><img src="img/route-02.jpg" alt=""></div>
                         <div class="text1">
-                            <p>黑妞皇家旅行普吉岛攀牙湾大船星光之旅皮划艇日落休闲特色体验</p>
+                            <p>工银星辰纪念衫</p>
+                            <br/>
+                            <p>1-2月出发，网付立享￥1099/2人起！爆款位置有限，抢完即止！</p>
+                        </div>
+                        <div class="price">
+                            <p class="price_num">
+                                <span>&yen;</span>
+                                <span>15</span>
+                                <span>起</span>
+                            </p>
+                            <p><a href="javascript:void(0);" onclick="showInfo(1)">查看详情</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img"><img src="img/route-01.jpg" alt=""></div>
+                        <div class="text1">
+                            <p>工银星辰纪念衫</p>
                             <br/>
                             <p>1-2月出发，网付立享￥1099/2人起！爆款位置有限，抢完即止！</p>
                         </div>
@@ -95,13 +94,13 @@
                                 <span>999</span>
                                 <span>起</span>
                             </p>
-                            <p><a href="route_detail.html">查看详情</a></p>
+                            <p><a href="javascript:void(0);" onclick="showInfo(1)">查看详情</a></p>
                         </div>
                     </li>
                     <li>
-                        <div class="img"><img src="images/04-search_03.jpg" alt=""></div>
+                        <div class="img"><img src="img/route-04.jpg" alt=""></div>
                         <div class="text1">
-                            <p>浪花朵朵旅行普吉岛皇帝岛珊瑚岛香蕉船拖拽伞水上项目</p>
+                            <p>纪念币</p>
                             <br/>
                             <p>1-2月出发，网付立享￥1099/2人起！爆款位置有限，抢完即止！</p>
                         </div>
@@ -111,10 +110,10 @@
                                 <span>99</span>
                                 <span>起</span>
                             </p>
-                            <p><a href="route_detail.html">查看详情</a></p>
+                            <p><a href="javascript:void(0);" onclick="showInfo(1)">查看详情</a></p>
                         </div>
                     </li>
-                    <li>
+                    <!--<li>
                         <div class="img"><img src="images/04-search_03.jpg" alt=""></div>
                         <div class="text1">
                             <p>环游记 泰国清迈Lila massage女子监狱spa 丽菈泰式按摩马杀鸡</p>
@@ -247,14 +246,16 @@
                             <p>网付价<span>&yen;<span>899</span>起</span>
                             </p>
                         </div>
-                    </li>
+                    </li>-->
                 </ul>
             </div>
         </div>
     </div>
 </div>
 
-
-
+<!--引入头部-->
+<div id="footer"></div>
+<!--导入布局js，共享header和footer-->
+<script type="text/javascript" src="js/include.js"></script>
 </body>
 </html>
